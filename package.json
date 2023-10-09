@@ -1,0 +1,139 @@
+{
+  "name": "quick-open-project",
+  "displayName": "Quick Open Project",
+  "description": "Easily open projects via keyboard",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quickOpenProject.openProject1",
+        "title": "Quick Open Project: Open Project 1"
+      },
+      {
+        "command": "quickOpenProject.openProject2",
+        "title": "Quick Open Project: Open Project 2"
+      },
+      {
+        "command": "quickOpenProject.openProject3",
+        "title": "Quick Open Project: Open Project 3"
+      },
+      {
+        "command": "quickOpenProject.openProject4",
+        "title": "Quick Open Project: Open Project 4"
+      },
+      {
+        "command": "quickOpenProject.openProject5",
+        "title": "Quick Open Project: Open Project 5"
+      },
+      {
+        "command": "quickOpenProject.openProject6",
+        "title": "Quick Open Project: Open Project 6"
+      },
+      {
+        "command": "quickOpenProject.openProject7",
+        "title": "Quick Open Project: Open Project 7"
+      },
+      {
+        "command": "quickOpenProject.openProject8",
+        "title": "Quick Open Project: Open Project 8"
+      },
+      {
+        "command": "quickOpenProject.openProject9",
+        "title": "Quick Open Project: Open Project 9"
+      },
+      {
+        "command": "quickOpenProject.openProject10",
+        "title": "Quick Open Project: Open Project 10"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Quick Open Project",
+      "properties": {
+        "quickOpenProject.projects": {
+          "type": "object",
+          "properties": {
+            "project1": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 1"
+            },
+            "project2": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 2"
+            },
+            "project3": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 3"
+            },
+            "project4": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 4"
+            },
+            "project5": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 5"
+            },
+            "project6": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 6"
+            },
+            "project7": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 7"
+            },
+            "project8": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 8"
+            },
+            "project9": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 9"
+            },
+            "project10": {
+              "type": "string",
+              "default": "",
+              "description": "Path to Project 10"
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}

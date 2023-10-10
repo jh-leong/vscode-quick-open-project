@@ -30,13 +30,17 @@ export function activate(context: vscode.ExtensionContext) {
         const uri = getUrl(i);
 
         uri &&
-          vscode.commands.executeCommand('vscode.openFolder', uri, {}).then(
-            () => ({}), // done
-            () =>
-              vscode.window.showInformationMessage(
-                `Could not open the project${i}!`
-              )
-          );
+          vscode.commands
+            .executeCommand('vscode.openFolder', uri, {
+              forceNewWindow: true,
+            })
+            .then(
+              () => ({}), // done
+              () =>
+                vscode.window.showInformationMessage(
+                  `Could not open the project${i}: ${uri}`
+                )
+            );
       }
     );
 

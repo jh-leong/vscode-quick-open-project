@@ -3,7 +3,7 @@
   "icon": "images/icon.png",
   "displayName": "Quick Open Project",
   "description": "Easily open projects via keyboard",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.83.0"
   },

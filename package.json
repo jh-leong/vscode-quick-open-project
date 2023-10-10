@@ -1,5 +1,6 @@
 {
   "name": "quick-open-project",
+  "icon": "images/icon.png",
   "displayName": "Quick Open Project",
   "description": "Easily open projects via keyboard",
   "version": "0.0.2",

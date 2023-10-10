@@ -3,7 +3,7 @@
   "icon": "images/icon.png",
   "publisher": "Tycho",
   "displayName": "Quick Open Project",
-  "description": "Easily open projects via keyboard",
+  "description": "Easily open projects via custom shortcuts",
   "version": "0.0.4",
   "engines": {
     "vscode": "^1.83.0"

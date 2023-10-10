@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
 import os = require('os');
@@ -8,13 +6,22 @@ import path = require('path');
 const userHome = os.homedir();
 const config = vscode.workspace.getConfiguration('quickOpenProject');
 
-function getUrl(key: number) {
-  const uri = config.get(`projects.project${key}`, '').replace(/^~/, '');
-  return uri ? vscode.Uri.file(path.join(userHome, uri)) : '';
+function joinUserHome(uri: string) {
+  return path.join(userHome, uri.replace(/^~/, ''));
 }
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+function isHomeDirPath(uri: string) {
+  return /^~/.test(uri);
+}
+
+function getUrl(key: number): vscode.Uri | void {
+  const uri = config.get<string>(`projects.project${key}`, '');
+
+  return uri
+    ? vscode.Uri.file(isHomeDirPath(uri) ? joinUserHome(uri) : uri)
+    : undefined;
+}
+
 export function activate(context: vscode.ExtensionContext) {
   for (let i = 1; i <= 10; i++) {
     const disposable = vscode.commands.registerCommand(
@@ -37,5 +44,4 @@ export function activate(context: vscode.ExtensionContext) {
   }
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}

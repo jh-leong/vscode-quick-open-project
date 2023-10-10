@@ -2,9 +2,13 @@
   "name": "quick-open-project",
   "displayName": "Quick Open Project",
   "description": "Easily open projects via keyboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.83.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jh-leong/vscode-quick-open-project.git"
   },
   "categories": [
     "Other"

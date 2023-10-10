@@ -1,6 +1,7 @@
 {
   "name": "quick-open-project",
   "icon": "images/icon.png",
+  "publisher": "Tycho",
   "displayName": "Quick Open Project",
   "description": "Easily open projects via keyboard",
   "version": "0.0.3",
@@ -116,7 +117,8 @@
               "default": "",
               "description": "Path to Project 10"
             }
-          }
+          },
+          "description": "Paths to projects to open"
         }
       }
     }

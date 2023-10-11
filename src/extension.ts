@@ -4,7 +4,6 @@ import os = require('os');
 import path = require('path');
 
 const userHome = os.homedir();
-const config = vscode.workspace.getConfiguration('quickOpenProject');
 
 function joinUserHome(uri: string) {
   return path.join(userHome, uri.replace(/^~/, ''));
@@ -14,7 +13,12 @@ function isHomeDirPath(uri: string) {
   return /^~/.test(uri);
 }
 
+function getConfig() {
+  return vscode.workspace.getConfiguration('quickOpenProject');
+}
+
 function getUrl(key: number): vscode.Uri | void {
+  const config = getConfig();
   const uri = config.get<string>(`projects.project${key}`, '');
 
   return uri

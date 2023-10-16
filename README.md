@@ -1,21 +1,19 @@
-# Support
+<sub><em>Tycho's</em></sub>
 
-Quick Open Project is an extension designed for Visual Studio Code. If you find it helpful, please consider giving it a star.
-
-# Quick Open Project
+<h1>Quick Open Project<sup><em> for VS Code</em></sup></h1>
 
 It helps you to easily access your projects using custom shortcuts, no matter where they are located.
 
-# Features
+## Use it
 
-## Available Commands
+### Available Commands
 
 - `Quick Open Project: Open Project 1`: Open project 1 in New Window
 - `Quick Open Project: Open Project 2`: Open project 2 in New Window
 - ...
 - `Quick Open Project: Open Project 10`: Open project 10 in New Window
 
-## Manage your projects
+### Manage your projects
 
 You can manage your projects by editing the `settings.json` file.
 
@@ -32,7 +30,7 @@ Example:
 },
 ```
 
-## Custom shortcuts
+### Custom shortcuts
 
 You can customize the shortcuts by editing the `keybindings.json` file.
 
@@ -51,6 +49,10 @@ Example:
 }
 ```
 
-# License
+## Support
+
+If you find it helpful, please consider giving it a star.
+
+## License
 
 This project is licensed under the [MIT License](/LICENCE).

@@ -4,7 +4,7 @@
   "publisher": "Tycho",
   "displayName": "Quick Open Project",
   "description": "Easily open projects via custom shortcuts",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -128,6 +128,7 @@
     }
   },
   "scripts": {
+    "build": "vsce package",
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -138,7 +139,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "~18.19.127",
-    "@types/vscode": "^1.104.0",
+    "@types/vscode": "^1.83.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vscode/test-electron": "^2.5.2",
@@ -146,5 +147,6 @@
     "glob": "^11.0.3",
     "mocha": "^10.8.2",
     "typescript": "^5.9.2"
-  }
+  },
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
 }

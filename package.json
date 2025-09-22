@@ -58,6 +58,10 @@
       {
         "command": "quickOpenProject.openProject10",
         "title": "Quick Open Project: Open Project 10"
+      },
+      {
+        "command": "quickOpenProject.copyfilename",
+        "title": "Quick Open Project: Copy Active Filename (no ext, index->dir)"
       }
     ],
     "configuration": {
@@ -132,15 +136,15 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
-    "@types/mocha": "^10.0.2",
-    "@types/node": "18.x",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "eslint": "^8.50.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
-    "@vscode/test-electron": "^2.3.4"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "~18.19.127",
+    "@types/vscode": "^1.104.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^8.57.1",
+    "glob": "^11.0.3",
+    "mocha": "^10.8.2",
+    "typescript": "^5.9.2"
   }
 }
